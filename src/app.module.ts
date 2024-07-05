@@ -1,17 +1,13 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { DatabaseModule } from './database/database.module';
+import { ConfigModule } from '@nestjs/config';
+import { TodoModule } from './todo/todo.module';
+
 
 @Module({
-  imports: [
-    ClientsModule.register([
-      {
-        name: 'TODOS_SERVICE',
-        transport: Transport.TCP,
-        options: {
-          host: 'localhost',
-          port: 
-  ],
+  imports: [DatabaseModule, ConfigModule.forRoot({isGlobal:true}), TodoModule],
   controllers: [AppController],
   providers: [AppService],
 })

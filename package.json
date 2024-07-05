@@ -23,10 +23,12 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.3",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "ioredis": "^5.4.1",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "nestjs-redis": "git+https://github.com/skunight/nestjs-redis.git"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
