@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
-import { CreateTodoDto } from './dto/create-todo.dto/create-todo.dto';
+import { CreateTodoDto } from './dto/create-todo.dto';
 
 
 @Injectable()
@@ -23,7 +23,7 @@ export class TodoService {
     return `This action returns a #${id} todo`;
   }
 
-  update(id: number, updateTodoDto: Partial<CreateTodoDto>) {
+  update(id: string, updateTodoDto: Partial<CreateTodoDto>) {
     
     console.log(updateTodoDto);
     return `This action updates a #${id} todo`;
